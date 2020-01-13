@@ -1,0 +1,188 @@
+{
+    "response": {
+        "GeoObjectCollection": {
+            "metaDataProperty": {
+                "GeocoderResponseMetaData": {
+                    "request": "nezavisimosty",
+                    "suggest": "независимости",
+                    "found": "100",
+                    "results": "3",
+                    "boundedBy": {
+                        "Envelope": {
+                            "lowerCorner": "53.402077 27.055377",
+                            "upperCorner": "54.402081 28.055364"
+                        }
+                    }
+                }
+            },
+            "featureMember": [
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "kind": "street",
+                                "text": "Беларусь, Минск, проспект Независимости",
+                                "precision": "street",
+                                "Address": {
+                                    "country_code": "BY",
+                                    "formatted": "Минск, проспект Независимости",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Беларусь"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Минск"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Минск"
+                                        },
+                                        {
+                                            "kind": "street",
+                                            "name": "проспект Независимости"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Минск, проспект Независимости",
+                                        "CountryNameCode": "BY",
+                                        "CountryName": "Беларусь",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Минск",
+                                            "Locality": {
+                                                "LocalityName": "Минск",
+                                                "Thoroughfare": {
+                                                    "ThoroughfareName": "проспект Независимости"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Минск, Беларусь",
+                        "name": "проспект Независимости",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "27.539831 53.890144",
+                                "upperCorner": "27.735188 53.96243"
+                            }
+                        },
+                        "Point": {
+                            "pos": "27.636409 53.930279"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "kind": "vegetation",
+                                "text": "Туркменистан, Ашхабад, парк Независимости",
+                                "precision": "other",
+                                "Address": {
+                                    "country_code": "TM",
+                                    "formatted": "Ашхабад, парк Независимости",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Туркменистан"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Ашхабад"
+                                        },
+                                        {
+                                            "kind": "vegetation",
+                                            "name": "парк Независимости"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Ашхабад, парк Независимости",
+                                        "CountryNameCode": "TM",
+                                        "CountryName": "Туркменистан",
+                                        "Locality": {
+                                            "LocalityName": "Ашхабад",
+                                            "Premise": {
+                                                "PremiseName": "парк Независимости"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Ашхабад, Туркменистан",
+                        "name": "парк Независимости",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "58.377477 37.879489",
+                                "upperCorner": "58.387969 37.895329"
+                            }
+                        },
+                        "Point": {
+                            "pos": "58.382912 37.887313"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "kind": "vegetation",
+                                "text": "Туркменистан, Ашхабад, сквер Независимости",
+                                "precision": "other",
+                                "Address": {
+                                    "country_code": "TM",
+                                    "formatted": "Ашхабад, сквер Независимости",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Туркменистан"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Ашхабад"
+                                        },
+                                        {
+                                            "kind": "vegetation",
+                                            "name": "сквер Независимости"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Ашхабад, сквер Независимости",
+                                        "CountryNameCode": "TM",
+                                        "CountryName": "Туркменистан",
+                                        "Locality": {
+                                            "LocalityName": "Ашхабад",
+                                            "Premise": {
+                                                "PremiseName": "сквер Независимости"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Ашхабад, Туркменистан",
+                        "name": "сквер Независимости",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "58.360885 37.94552",
+                                "upperCorner": "58.362673 37.947014"
+                            }
+                        },
+                        "Point": {
+                            "pos": "58.361783 37.94626"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

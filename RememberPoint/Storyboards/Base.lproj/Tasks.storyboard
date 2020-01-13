@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HbR-2G-EL6">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wxY-Nh-R90">
+            <objects>
+                <navigationController id="HbR-2G-EL6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vWf-Cg-GcB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OGi-Mt-hRT" kind="relationship" relationship="rootViewController" id="52i-uH-NTQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJQ-2W-Hz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-921" y="45"/>
+        </scene>
+        <!--Reminders-->
+        <scene sceneID="L4e-ru-kIn">
+            <objects>
+                <viewController id="OGi-Mt-hRT" customClass="TasksViewController" customModule="RememberPoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fuI-OU-9MV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wif-qR-7de">
+                                <rect key="frame" x="0.0" y="44" width="375" height="46"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="27t-Sa-lDT">
+                                        <rect key="frame" x="16" y="7.5" width="343" height="32"/>
+                                        <segments>
+                                            <segment title="Active"/>
+                                            <segment title="Done"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="27t-Sa-lDT" secondAttribute="trailing" constant="16" id="6ug-eP-Ydh"/>
+                                    <constraint firstItem="27t-Sa-lDT" firstAttribute="centerY" secondItem="Wif-qR-7de" secondAttribute="centerY" id="K9W-WQ-T7p"/>
+                                    <constraint firstAttribute="height" constant="46" id="TCN-ZT-cls"/>
+                                    <constraint firstItem="27t-Sa-lDT" firstAttribute="leading" secondItem="Wif-qR-7de" secondAttribute="leading" constant="16" id="sYb-fm-pZh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sec-4T-JPX">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleReminder" translatesAutoresizingMaskIntoConstraints="NO" id="dZR-4k-5FH">
+                                        <rect key="frame" x="75" y="90" width="225" height="225"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dZR-4k-5FH" secondAttribute="height" multiplier="1:1" id="W5b-eZ-zwK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaF-rP-Qgg">
+                                        <rect key="frame" x="41" y="372" width="293" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="dIF-K9-uCR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Add new reminder">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="26"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dZR-4k-5FH" firstAttribute="width" secondItem="sec-4T-JPX" secondAttribute="width" multiplier="0.6" id="Ge6-vW-jby"/>
+                                    <constraint firstAttribute="trailing" secondItem="BaF-rP-Qgg" secondAttribute="trailing" constant="41" id="S9Q-tG-PsT"/>
+                                    <constraint firstItem="dZR-4k-5FH" firstAttribute="top" secondItem="sec-4T-JPX" secondAttribute="top" constant="90" id="qwL-yv-tzx"/>
+                                    <constraint firstItem="dZR-4k-5FH" firstAttribute="centerX" secondItem="sec-4T-JPX" secondAttribute="centerX" id="sxk-oV-BI9"/>
+                                    <constraint firstItem="BaF-rP-Qgg" firstAttribute="top" secondItem="dZR-4k-5FH" secondAttribute="bottom" constant="57" id="uQ8-QT-J2n"/>
+                                    <constraint firstItem="BaF-rP-Qgg" firstAttribute="leading" secondItem="sec-4T-JPX" secondAttribute="leading" constant="41" id="wyd-lc-9H6"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-0K-dMK">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qPe-2a-ZGZ">
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="trailing" secondItem="gV1-0K-dMK" secondAttribute="trailing" id="16r-Fa-XBC"/>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="bottom" secondItem="qPe-2a-ZGZ" secondAttribute="bottom" id="EYe-sL-36H"/>
+                            <constraint firstItem="qPe-2a-ZGZ" firstAttribute="leading" secondItem="Ixp-qY-Pvn" secondAttribute="leading" id="Pkz-Pt-roj"/>
+                            <constraint firstItem="Wif-qR-7de" firstAttribute="leading" secondItem="Ixp-qY-Pvn" secondAttribute="leading" id="T65-8s-1qJ"/>
+                            <constraint firstItem="gV1-0K-dMK" firstAttribute="leading" secondItem="Ixp-qY-Pvn" secondAttribute="leading" id="XMW-hd-eEz"/>
+                            <constraint firstItem="Wif-qR-7de" firstAttribute="top" secondItem="Ixp-qY-Pvn" secondAttribute="top" id="aG6-8o-ewe"/>
+                            <constraint firstItem="sec-4T-JPX" firstAttribute="leading" secondItem="Ixp-qY-Pvn" secondAttribute="leading" id="bei-12-eqI"/>
+                            <constraint firstItem="qPe-2a-ZGZ" firstAttribute="top" secondItem="Wif-qR-7de" secondAttribute="bottom" id="d4f-dO-nyz"/>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="trailing" secondItem="qPe-2a-ZGZ" secondAttribute="trailing" id="eu8-a4-yR9"/>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="bottom" secondItem="sec-4T-JPX" secondAttribute="bottom" id="f1y-Ul-3rv"/>
+                            <constraint firstItem="gV1-0K-dMK" firstAttribute="top" secondItem="Wif-qR-7de" secondAttribute="bottom" id="fah-lg-f1X"/>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="trailing" secondItem="Wif-qR-7de" secondAttribute="trailing" id="h63-SG-wTC"/>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="bottom" secondItem="gV1-0K-dMK" secondAttribute="bottom" id="lx6-sW-gw9"/>
+                            <constraint firstItem="sec-4T-JPX" firstAttribute="top" secondItem="Wif-qR-7de" secondAttribute="bottom" id="yIy-xl-HHR"/>
+                            <constraint firstItem="Ixp-qY-Pvn" firstAttribute="trailing" secondItem="sec-4T-JPX" secondAttribute="trailing" id="zsg-2n-4JN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ixp-qY-Pvn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reminders" id="scI-Z2-FLr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="a2D-PX-sRV">
+                            <connections>
+                                <action selector="addClicked:" destination="OGi-Mt-hRT" id="Mya-me-auU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activeTableView" destination="gV1-0K-dMK" id="HbK-2F-NOW"/>
+                        <outlet property="doneTableView" destination="qPe-2a-ZGZ" id="06f-fH-2bx"/>
+                        <outlet property="newReminderButton" destination="BaF-rP-Qgg" id="QKf-PF-3Gb"/>
+                        <outlet property="segmentControl" destination="27t-Sa-lDT" id="9Lk-F9-b91"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJq-Sz-zDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="45"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circleReminder" width="222" height="222"/>
+    </resources>
+</document>

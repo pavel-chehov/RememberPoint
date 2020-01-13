@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p3K-v8-wsL">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setup View Controller-->
+        <scene sceneID="D4a-Dz-YXD">
+            <objects>
+                <viewController id="p3K-v8-wsL" customClass="SetupViewController" customModule="RememberPoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsz-TC-fyz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pagerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Bzi-BY-iXF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-9S-zaO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="340"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fEN-3S-Ghg">
+                                    <size key="itemSize" width="375" height="445"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rdy-xZ-Xtk">
+                                <rect key="frame" x="140.5" y="443" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.42352941179999998" green="0.36862745099999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-3L-vfc">
+                                <rect key="frame" x="37" y="370" width="246" height="58"/>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.36862745098039218" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="7sG-le-VER"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="29"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionButtonClicked:" destination="p3K-v8-wsL" eventType="touchUpInside" id="gNP-1a-8Kg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5qh-3L-vfc" firstAttribute="top" secondItem="Q96-9S-zaO" secondAttribute="bottom" constant="30" id="1zu-zb-94W"/>
+                            <constraint firstItem="Q96-9S-zaO" firstAttribute="top" secondItem="snO-b7-qop" secondAttribute="top" id="G0Y-Qm-G74"/>
+                            <constraint firstItem="Rdy-xZ-Xtk" firstAttribute="centerX" secondItem="Dsz-TC-fyz" secondAttribute="centerX" id="MB3-Ou-oG4"/>
+                            <constraint firstItem="5qh-3L-vfc" firstAttribute="width" secondItem="Dsz-TC-fyz" secondAttribute="width" multiplier="0.77" id="Qes-8e-vAh"/>
+                            <constraint firstItem="Rdy-xZ-Xtk" firstAttribute="top" secondItem="5qh-3L-vfc" secondAttribute="bottom" constant="15" id="QpB-ov-dLU"/>
+                            <constraint firstItem="Bzi-BY-iXF" firstAttribute="leading" secondItem="Dsz-TC-fyz" secondAttribute="leading" id="WQZ-vC-Up0"/>
+                            <constraint firstItem="snO-b7-qop" firstAttribute="trailing" secondItem="Q96-9S-zaO" secondAttribute="trailing" id="ZQf-x9-WND"/>
+                            <constraint firstAttribute="bottom" secondItem="Bzi-BY-iXF" secondAttribute="bottom" id="aA5-WF-awV"/>
+                            <constraint firstItem="Q96-9S-zaO" firstAttribute="leading" secondItem="snO-b7-qop" secondAttribute="leading" id="eaT-kh-gxI"/>
+                            <constraint firstItem="5qh-3L-vfc" firstAttribute="centerX" secondItem="Dsz-TC-fyz" secondAttribute="centerX" id="ksS-3e-rr8"/>
+                            <constraint firstItem="Bzi-BY-iXF" firstAttribute="top" secondItem="Dsz-TC-fyz" secondAttribute="top" id="op4-jJ-c2w"/>
+                            <constraint firstAttribute="trailing" secondItem="Bzi-BY-iXF" secondAttribute="trailing" id="pWk-yl-05U"/>
+                            <constraint firstItem="snO-b7-qop" firstAttribute="bottom" secondItem="Rdy-xZ-Xtk" secondAttribute="bottom" id="vwW-Uo-4Zh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="snO-b7-qop"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5dH-e4-bq2"/>
+                    <connections>
+                        <outlet property="actionButton" destination="5qh-3L-vfc" id="JNg-mu-dGt"/>
+                        <outlet property="collectionView" destination="Q96-9S-zaO" id="MvF-ac-bJT"/>
+                        <outlet property="pagerView" destination="Rdy-xZ-Xtk" id="y4J-b0-mdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b79-4y-gZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="155.17241379310346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pagerBackground" width="375" height="667"/>
+    </resources>
+</document>

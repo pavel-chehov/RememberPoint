@@ -1,0 +1,92 @@
+{
+    "response": {
+        "GeoObjectCollection": {
+            "metaDataProperty": {
+                "GeocoderResponseMetaData": {
+                    "request": "27.532673,53.904575",
+                    "found": "28",
+                    "results": "1",
+                    "boundedBy": {
+                        "Envelope": {
+                            "lowerCorner": "27.530174 53.902077",
+                            "upperCorner": "27.535169 53.907074"
+                        }
+                    },
+                    "Point": {
+                        "pos": "27.532673 53.904575"
+                    },
+                    "kind": "house"
+                }
+            },
+            "featureMember": [
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "kind": "house",
+                                "text": "Беларусь, Минск, улица Клары Цеткин, 51",
+                                "precision": "exact",
+                                "Address": {
+                                    "country_code": "BY",
+                                    "formatted": "Минск, улица Клары Цеткин, 51",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Беларусь"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Минск"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Минск"
+                                        },
+                                        {
+                                            "kind": "street",
+                                            "name": "улица Клары Цеткин"
+                                        },
+                                        {
+                                            "kind": "house",
+                                            "name": "51"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Минск, улица Клары Цеткин, 51",
+                                        "CountryNameCode": "BY",
+                                        "CountryName": "Беларусь",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Минск",
+                                            "Locality": {
+                                                "LocalityName": "Минск",
+                                                "Thoroughfare": {
+                                                    "ThoroughfareName": "улица Клары Цеткин",
+                                                    "Premise": {
+                                                        "PremiseNumber": "51"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Минск, Беларусь",
+                        "name": "улица Клары Цеткин, 51",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "27.528297 53.902236",
+                                "upperCorner": "27.536508 53.907084"
+                            }
+                        },
+                        "Point": {
+                            "pos": "27.532402 53.90466"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

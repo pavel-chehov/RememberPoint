@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EtK-Cw-p7X">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5vx-Fw-oRj">
+            <objects>
+                <navigationController id="EtK-Cw-p7X" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nrP-kF-FwU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OaW-14-nr5" kind="relationship" relationship="rootViewController" id="75E-YC-bA4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0iY-WQ-vvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790" y="116"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="U6n-sb-ERs">
+            <objects>
+                <viewController id="OaW-14-nr5" customClass="SettingsViewController" customModule="RememberPoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAX-Rc-NNv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sUT-lU-ex5">
+                                <rect key="frame" x="0.0" y="109" width="375" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="lfI-Ko-pgr"/>
+                                </constraints>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to allow permanent access to geolocation so that geo-reminders work correctly." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqF-CP-I5E">
+                                <rect key="frame" x="13" y="207" width="292" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to allow notifications for make reminders work correctly." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-po-GPR">
+                                <rect key="frame" x="13" y="238" width="292" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6e-yF-9NU">
+                                <rect key="frame" x="0.0" y="199" width="375" height="468"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B2y-dp-mAf" firstAttribute="bottom" secondItem="Z6e-yF-9NU" secondAttribute="bottom" id="5v5-BD-xao"/>
+                            <constraint firstItem="Z6e-yF-9NU" firstAttribute="leading" secondItem="B2y-dp-mAf" secondAttribute="leading" id="6Nd-iO-9BJ"/>
+                            <constraint firstItem="Efr-po-GPR" firstAttribute="top" secondItem="sUT-lU-ex5" secondAttribute="bottom" priority="749" constant="8" id="7QG-5l-62T"/>
+                            <constraint firstItem="sUT-lU-ex5" firstAttribute="trailing" secondItem="B2y-dp-mAf" secondAttribute="trailing" id="Rbx-dL-n0b"/>
+                            <constraint firstItem="B2y-dp-mAf" firstAttribute="trailing" secondItem="Z6e-yF-9NU" secondAttribute="trailing" id="Rrw-pM-v1r"/>
+                            <constraint firstItem="Efr-po-GPR" firstAttribute="top" secondItem="eqF-CP-I5E" secondAttribute="bottom" constant="2" id="Xvq-gM-tm7"/>
+                            <constraint firstItem="B2y-dp-mAf" firstAttribute="trailing" secondItem="eqF-CP-I5E" secondAttribute="trailing" constant="70" id="dRP-0b-BaG"/>
+                            <constraint firstItem="sUT-lU-ex5" firstAttribute="leading" secondItem="B2y-dp-mAf" secondAttribute="leading" id="fAu-uy-coB"/>
+                            <constraint firstItem="B2y-dp-mAf" firstAttribute="trailing" secondItem="Efr-po-GPR" secondAttribute="trailing" constant="70" id="fCf-Mw-Dhu"/>
+                            <constraint firstItem="eqF-CP-I5E" firstAttribute="leading" secondItem="B2y-dp-mAf" secondAttribute="leading" constant="13" id="jZK-cm-mao"/>
+                            <constraint firstItem="sUT-lU-ex5" firstAttribute="top" secondItem="B2y-dp-mAf" secondAttribute="top" constant="45" id="kaF-hz-B8p"/>
+                            <constraint firstItem="Z6e-yF-9NU" firstAttribute="top" secondItem="sUT-lU-ex5" secondAttribute="bottom" id="ptx-DD-oa4"/>
+                            <constraint firstItem="Efr-po-GPR" firstAttribute="leading" secondItem="B2y-dp-mAf" secondAttribute="leading" constant="13" id="yDs-2h-u9H"/>
+                            <constraint firstItem="eqF-CP-I5E" firstAttribute="top" secondItem="sUT-lU-ex5" secondAttribute="bottom" constant="8" id="zAp-Ay-Me7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B2y-dp-mAf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="63R-Ry-MUT"/>
+                    <connections>
+                        <outlet property="locationAlarmLabel" destination="eqF-CP-I5E" id="kpb-iw-GuL"/>
+                        <outlet property="notificationAlarmLabel" destination="Efr-po-GPR" id="H7h-1e-416"/>
+                        <outlet property="recognizerOverlayView" destination="Z6e-yF-9NU" id="GUy-iJ-REm"/>
+                        <outlet property="tableHeight" destination="lfI-Ko-pgr" id="P3x-DU-AlL"/>
+                        <outlet property="tableView" destination="sUT-lU-ex5" id="mHT-62-WCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bel-G7-jwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
